@@ -13,6 +13,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "insert-line": "^1.1.0",
+    "line-reader": "^0.4.0",
+    "n-readlines": "^1.0.1",
+    "prompt-sync": "^4.2.0",
     "yargs": "^17.5.1"
   }
 }
