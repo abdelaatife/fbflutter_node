@@ -99,7 +99,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Abde lattif Ben kaida** - *Initial work* - [abdelaatife](https://github.com/abdelaatife)
 
-See also the list of [contributors](https://github.com/abdelaatife/fblutte_noder/contributors) who participated in this project.
+
 
 ## License
 
