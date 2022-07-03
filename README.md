@@ -57,6 +57,7 @@ To install and set up the library, run:
 
 ```sh
 $ npm i fflutter
+$ sudo npm link fflutter
 ```
 
 
