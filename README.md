@@ -3,6 +3,7 @@
 > fflutter is CLI Application built with node js to make integrating flutter with firebase easier than ever, with one command you will create a flutter firebase project only in android.
 
 ## main Features
+
 * create a new flutter project
 * init firebase  in the project
 * add firebase code to the gradle 
@@ -28,7 +29,7 @@ v8.16.0
 ## Table of contents
 
 - [Project Name](#project-name)
-  - [main Features](#main Features)
+  - [main Features](#main-Features)
   - [Prerequisites](#prerequisites)
   - [Table of contents](#table-of-contents)
   - [Getting Started](#getting-started)
