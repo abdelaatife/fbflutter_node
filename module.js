@@ -1,7 +1,11 @@
 const insertLine = require("insert-line");
 const prompt = require("prompt-sync")();
 const { exec } = require("child_process");
+const lineReader = require("line-reader");
+const { cwd } = require("process");
+const fs = require("fs");
 
+//insert function to insert a line in a file
 function insert(content, line, file) {
   insertLine(file)
     .content(content)
@@ -12,6 +16,7 @@ function insert(content, line, file) {
       }
     });
 }
+//end insert function
 //ask if user want add other firebase  dependencies
 function outherdep() {
   const answer = prompt(
@@ -66,4 +71,20 @@ function outherdep() {
   }
 }
 //end of outherdep function
-module.exports = { insert, outherdep };
+
+//line reader to read a file and changeit
+function readFile( file ,keyworde, content) {
+  fs.readFile(file, 'utf8', function (err,data) {
+    if (err) {
+      return console.log(err);
+    }
+    var result = data.replace(keyworde,  content);
+  
+    fs.writeFile(file, result, 'utf8', function (err) {
+       if (err) return console.log(err);
+    });
+  });
+}
+
+//end of line reader
+module.exports = { insert, outherdep, readFile };

@@ -2,9 +2,10 @@
 const add = require("./module");
 const { exec } = require("child_process");
 const { clear } = require("console");
-const fs = require("fs");
+const {readFile, writeFile, promises: fsPromises} = require('fs');
 const process = require("process");
 const prompt = require("prompt-sync")();
+const replace = require("replace");
 
 const { exit, chdir, cwd } = require("process");
 //end dependencies
@@ -75,14 +76,27 @@ const creat = (a) => {
             "\x1b[37m",
             "implementation 'com.android.support:multidex:1.0.3' added to app/build.gradle"
           );
+         
           console.log("\x1b[32m", "Firebase is initialized successfully ");
           console.log("\x1b[37m", "Please wait...");
+        }
+        function rep () {
+          replace({
+            regex: "flutter.minSdkVersion",
+            replacement: "19 ",
+            paths: ['build.gradle'],
+            recursive: true,
+            silent: true,
+        });
+      
         }
         // this function will be called after the first function
         setTimeout(sec, 1000);
         setTimeout(tro, 2000);
+        setTimeout(rep, 3000);
+        
       }
-      setTimeout(secend, 1000);
+      setTimeout(secend, 4000);
       // therd function will be called after the second function
       //generate firebase project information to add it in firebase console
       async function therd() {
@@ -115,7 +129,7 @@ const creat = (a) => {
                 `com.example.${name}`
               );
               console.log(
-                "\x1b[36m",
+                "\x1b[31m",
                 "\nDon't forget to download the google-services.json file\n from the firebase console and add it to : " +
                   "\x1b[33m",
                 "android/app/"
@@ -139,15 +153,17 @@ const creat = (a) => {
             console.log("\x1b[32m", "firebase core pub dependency added");
             //intialize firebase in main.dart file
             function imr() {
+             
               add.insert(
                 "import 'package:firebase_core/firebase_core.dart';  ",
-                1,
+                2,
                 "main.dart"
               );
               console.log(
                 "\x1b[32m",
                 "firebase core pub dependency added to main.dart"
               );
+              console.log("\x1b[31m" ,"Don't forget to add  async  in your main function");
             }
             //this function will be called after the imr function
             function imr2() {
@@ -156,11 +172,14 @@ const creat = (a) => {
                 5,
                 "main.dart"
               );
+               
               console.log(
                 "\x1b[32m",
                 "firebase is initialized successfully in main.dart"
               );
+             
             }
+            
 
             //order of the functions and timeouts
             setTimeout(imr, 1000);
