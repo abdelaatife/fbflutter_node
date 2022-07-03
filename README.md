@@ -1,6 +1,6 @@
-# fbflutter
+# fflutter
 
-> fbflutter is CLI Application built with node js to make integrating flutter with firebase easier than ever, with one command you will create a flutter firebase project only in android.
+> fflutter is CLI Application built with node js to make integrating flutter with firebase easier than ever, with one command you will create a flutter firebase project only in android.
 
 ## main Features
 * create a new flutter project
@@ -56,7 +56,7 @@ These instructions will get you a copy of the project up and running on your loc
 To install and set up the library, run:
 
 ```sh
-$ npm i fbflutter
+$ npm i fflutter
 ```
 
 
@@ -68,7 +68,7 @@ $ npm i fbflutter
 ### Running the commend
 
 ```sh
-$ fbflutter create
+$ fflutter create
 ```
 
 
@@ -99,7 +99,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Abde lattif Ben kaida** - *Initial work* - [abdelaatife](https://github.com/abdelaatife)
 
-See also the list of [contributors](https://github.com/abdelaatife/fbflutter/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/abdelaatife/fflutter/contributors) who participated in this project.
 
 ## License
 
