@@ -84,7 +84,7 @@ $ fflutter create
 ## Credits
 
 TODO: 
-* make it available 
+* make it available for other platforms 
 
 
 ## Built With
